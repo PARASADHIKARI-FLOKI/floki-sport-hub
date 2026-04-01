@@ -616,3 +616,359 @@ form button:hover {
         padding: 25px 20px;
     }
 }
+
+
+/* about section */
+/* ===== GLOBAL ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HERO SECTION ===== */
+.about-hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.about-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    top: 0;
+    left: 0;
+}
+
+.about-hero-text {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 2;
+    max-width: 600px;
+    animation: fadeInUp 1s ease;
+
+}
+
+.about-hero-text h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.about-hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-hero-text a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.about-hero-text a:hover {
+    background: #1e3a8a;
+}
+
+/* ===== STORY SECTION ===== */
+.about-section {
+    padding: 80px 10%;
+    background: #f8fafc;
+}
+
+/* 2 column layout */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+/* headings */
+.about-section h1 {
+    font-size: 30px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+/* underline */
+.about-section h1::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #2563eb;
+    display: block;
+    margin-top: 6px;
+}
+
+/* text */
+.about-section p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.9;
+}
+
+/* ===== VALUES SECTION ===== */
+.about-values {
+    padding: 90px 10%;
+    text-align: center;
+    background: linear-gradient(135deg, #eef2ff, #ffffff);
+}
+
+.about-values h1 {
+    font-size: 34px;
+    margin-bottom: 50px;
+    color: #1e3a8a;
+}
+
+/* grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* card */
+.value-box {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 15px;
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* top border animation */
+.value-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #2563eb;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.4s;
+}
+
+.value-box:hover::before {
+    transform: scaleX(1);
+}
+
+/* hover */
+.value-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* icon */
+.value-box i {
+    font-size: 28px;
+    color: #2563eb;
+    background: #e0e7ff;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+/* icon hover */
+.value-box:hover i {
+    background: #2563eb;
+    color: #fff;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* title */
+.value-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+/* text */
+.value-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero-text h1 {
+        font-size: 36px;
+    }
+}
+
+
+/* Gallery Styles */
+/* Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section with Background Image */
+.gallery-hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('https://flokisport.lovable.app/assets/hero-stadium-C-STC0gW.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+/* Dark overlay for readability */
+.gallery-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Hero Text */
+.gallery-hero h1,
+.gallery-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.gallery-hero p {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Section Title and Subtitle (if separate from hero) */
+h1.section-title {
+    text-align: center;
+    margin: 30px 0 10px;
+    font-size: 2.5rem;
+    color: #222;
+}
+
+p.section-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Gallery Grid Container */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 50px 50px 50px;
+    margin-top: 100px;
+}
+
+/* Individual Gallery Items */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Images */
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Effects */
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-hero {
+        height: 300px;
+    }
+    .gallery-hero h1 {
+        font-size: 2rem;
+    }
+    .gallery-hero p {
+        font-size: 1rem;
+    }
+    .gallery-container {
+        padding: 0 20px 30px 20px;
+    }
+    .gallery-item img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-hero {
+        height: 250px;
+    }
+    .gallery-hero h1 {
+        font-size: 1.5rem;
+    }
+    .gallery-hero p {
+        font-size: 0.9rem;
+    }
+    .gallery-item img {
+        height: 150px;
+    }
+}
