@@ -1091,3 +1091,138 @@ p.section-subtitle {
         flex-direction: column;
     }
 }
+
+/* ===== EVENTS SECTION ===== */
+.events {
+  background: #f5f7fa;
+  padding-bottom: 60px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== HERO SECTION ===== */
+.events-hero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.events-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%); /* dark overlay effect */
+}
+
+/* overlay text */
+.events-hero h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.events-hero p {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ddd;
+  font-size: 16px;
+}
+
+/* ===== TITLE ===== */
+.events h2 {
+  text-align: center;
+  margin: 50px 0 30px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ===== EVENTS GRID ===== */
+.events-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+ 
+}
+
+/* ===== EVENT CARD ===== */
+.event-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+/* image */
+.event-card img {
+  width: 120px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+
+}
+
+/* text */
+.event-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.event-card p {
+  margin: 4px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+
+/* icon + text alignment */
+.event-card p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* icon style */
+.event-card i {
+  color: #ff6b00;
+  font-size: 14px;
+}
+
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .events-container {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    padding: 25px;
+  }
+}
