@@ -79,8 +79,8 @@ body {
 
 .join {
     position: absolute;
-    top: 65%;
-    left: 40%;
+    top: 60%;
+    left: 35%;
     display: inline-block;
     margin: 10px;
     border: 2px solid gray;
@@ -99,8 +99,8 @@ body {
 
 .learn {
     position: absolute;
-    top: 65%;
-    left: 55%;
+    top: 60%;
+    left: 50%;
     display: inline-block;
     margin: 10px;
     padding: 12px 30px;
