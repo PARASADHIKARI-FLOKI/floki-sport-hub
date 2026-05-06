@@ -6,30 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floki Sports Hub</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="index.html">
-            <img src="https://png.pngtree.com/png-clipart/20240310/original/pngtree-d-trophy-cup-with-confetti-gold-winner-prize-champion-reward-first-png-image_14555661.png"
-                alt="Logo" width="50" height="30">
+      <!-- Navbar -->
+   <div class="navbar">
+    <a href="index.html">
+        <img src="../image/Floki Sports Hub logo design.png" alt="Logo" width="60">
+    </a>
 
-        </a>
-        <h3 class="floki">FLOKI SPORTS HUB</h3>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="sports.html">Sports</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="teams.html">Teams</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+    <h3 class="floki">FLOKI SPORTS HUB</h3>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- ✅ FIXED HERE -->
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</div>
+
+
+<section class="teams-hero">
+    <div class="teams-overlay">
+        <h1>OUR TEAMS</h1>
+        <p>Meet the athletes who make us proud</p>
     </div>
+</section>
 
+<section class="teams-container">
+
+    <a href="team1.html" class="team-card">
+        <img src="https://flokisport.lovable.app/assets/basketball-team-8TLpCCcV.jpg">
+        <div class="team-content">
+            <h3>BASKETBALL</h3>
+            <p class="coach">Coach Mike Davis</p>
+
+            <div class="team-info">
+                <span class="record">22-6</span>
+                <span class="team-name">Western Athletes</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="team2.html" class="team-card">
+        <img src="https://flokisport.lovable.app/assets/soccer-team-pCVPS1uT.jpg">
+        <div class="team-content">
+            <h3>SOCCER</h3>
+            <p class="coach">Coach Lisa Chen</p>
+
+            <div class="team-info">
+                <span class="record">18-4-2</span>
+                <span class="team-name">Eastern Warriors</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="team3.html" class="team-card">
+        <img src="https://flokisport.lovable.app/assets/swimming-01E_mGQq.jpg">
+        <div class="team-content">
+            <h3>SWIMMING</h3>
+            <p class="coach">Coach James Park</p>
+
+            <div class="team-info">
+                <span class="record">Regional Champions</span>
+                <span class="team-name">Northern Dolphins</span>
+            </div>
+        </div>
+    </a>
+
+</section>
     
 
     <!-- Footer -->
@@ -99,6 +152,7 @@
             <p>&copy; 2026 Floki University Sports Club. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

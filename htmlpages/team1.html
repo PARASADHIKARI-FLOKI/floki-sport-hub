@@ -6,30 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floki Sports Hub</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <!-- Navbar -->
-    <div class="navbar">
-        <a href="index.html">
-            <img src="https://png.pngtree.com/png-clipart/20240310/original/pngtree-d-trophy-cup-with-confetti-gold-winner-prize-champion-reward-first-png-image_14555661.png"
-                alt="Logo" width="50" height="30">
+   <div class="navbar">
+    <a href="index.html">
+        <img src="../image/Floki Sports Hub logo design.png" alt="Logo" width="60">
+    </a>
 
-        </a>
-        <h3 class="floki">FLOKI SPORTS HUB</h3>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="sports.html">Sports</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="teams.html">Teams</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+    <h3 class="floki">FLOKI SPORTS HUB</h3>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- ✅ FIXED HERE -->
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</div>
+
+    
+  <!-- HERO -->
+<section class="team-hero">
+    <div class="team-overlay">
+        <h1>BASKETBALL</h1>
+        <p>Coach Mike Davis • 22-6</p>
     </div>
+</section>
 
+<!-- MAIN CONTENT -->
+<section class="team-page">
+
+    <a href="teams.html" class="back-link">← Back to Teams</a>
+
+    <div class="team-grid">
+
+        <!-- LEFT: ABOUT -->
+        <div class="about">
+            <h2>ABOUT THE TEAM</h2>
+            <p>
+                The Floki Basketball program is one of the most storied in the conference.
+                Under Coach Davis, the team has reached the playoffs in each of the last five seasons.
+                Known for their fast-paced offense and tenacious defense, the Floki play to a packed arena every home game.
+            </p>
+
+            <div class="coach-box">
+                <span>HEAD COACH:</span> Coach Mike Davis
+            </div>
+        </div>
+
+        <!-- RIGHT: ROSTER -->
+        <div class="roster">
+            <h2>KEY ROSTER</h2>
+
+            <div class="player-card">
+                <div>
+                    <h3>Marcus Johnson</h3>
+                    <p>Point Guard</p>
+                </div>
+                <span class="badge">Senior</span>
+            </div>
+
+            <div class="player-card">
+                <div>
+                    <h3>Tyler Brooks</h3>
+                    <p>Shooting Guard</p>
+                </div>
+                <span class="badge">Junior</span>
+            </div>
+
+            <div class="player-card">
+                <div>
+                    <h3>David Kim</h3>
+                    <p>Small Forward</p>
+                </div>
+                <span class="badge">Senior</span>
+            </div>
+            <div class="player-card">
+                <div>
+                    <h3>James Wright</h3>
+                    <p>Power Forward</p>
+                </div>
+                <span class="badge">Sophomore</span>
+            </div>
+            <div class="player-card">
+                <div>
+                    <h3>Andre Thomas</h3>
+                    <p>Center</p>
+                </div>
+                <span class="badge">Junior</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
     
 
     <!-- Footer -->
@@ -99,6 +178,7 @@
             <p>&copy; 2026 Floki University Sports Club. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floki Sports Hub</title>
+    <title>Floki Sports Hub - Login</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
+ <div id="custom-alert" class="custom-alert"></div>
     <!-- Navbar -->
     <div class="navbar">
         <a href="index.html">
-            <img src="https://png.pngtree.com/png-clipart/20240310/original/pngtree-d-trophy-cup-with-confetti-gold-winner-prize-champion-reward-first-png-image_14555661.png"
-                alt="Logo" width="50" height="30">
-
+            <img src="../image/Floki Sports Hub logo design.png" alt="Logo" width="60">
         </a>
+
         <h3 class="floki">FLOKI SPORTS HUB</h3>
-        <ul>
+
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="sports.html">Sports</a></li>
@@ -29,41 +31,46 @@
             <li><a href="login.html">Login</a></li>
         </ul>
     </div>
-    <div>
-        <!-- login form -->
-        <form>
+
+    <!-- Login form -->
+    <div class="form-container">
+        <form id="loginForm" autocomplete="off">
             <img src="https://png.pngtree.com/png-clipart/20240310/original/pngtree-d-trophy-cup-with-confetti-gold-winner-prize-champion-reward-first-png-image_14555661.png"
                 alt="Logo" width="50" height="30">
+
             <h2>WELCOME BACK</h2>
             <p>Sign in to your Floki Sports account</p>
+
             <div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" autocomplete="off" required>
             </div>
+
             <div>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <div style="position:relative;">
+                    <input type="password" id="password" name="password" autocomplete="new-password" required>
+                    <span class="toggle-password" data-target="password"
+                        style="position:absolute; color: black; right:10px; top:50%; transform:translateY(-50%); cursor:pointer;">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
             </div>
+
             <button type="submit">Login</button>
-            <p  class="login-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+            <p class="login-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
         </form>
     </div>
-
-    
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-
-            <!-- About -->
             <div class="footer-section">
                 <img src="https://png.pngtree.com/png-clipart/20240310/original/pngtree-d-trophy-cup-with-confetti-gold-winner-prize-champion-reward-first-png-image_14555661.png"
                     alt="Logo" width="50" height="30">
                 <h3>Floki Sports Club</h3>
-                <p>
-                    Building champions, one game at a time. Join our community and
-                    discover your athletic potential.
-                </p>
+                <p>Building champions, one game at a time. Join our community and discover your athletic potential.</p>
 
                 <div class="social-links">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -73,7 +80,6 @@
                 </div>
             </div>
 
-            <!-- Quick Links -->
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
@@ -82,12 +88,9 @@
                     <li><a href="events.html">Events</a></li>
                     <li><a href="teams.html">Teams</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-
-
                 </ul>
             </div>
 
-            <!-- Resources -->
             <div class="footer-section">
                 <h3>Sports</h3>
                 <ul>
@@ -100,7 +103,6 @@
                 </ul>
             </div>
 
-            <!-- Contact -->
             <div class="footer-section">
                 <h3>Contact Info</h3>
                 <ul>
@@ -110,14 +112,13 @@
                     <li>🕒 Mon-Fri: 8AM-8PM</li>
                 </ul>
             </div>
-
         </div>
 
-        <!-- Bottom -->
         <div class="footer-bottom">
             <p>&copy; 2026 Floki University Sports Club. All rights reserved.</p>
         </div>
     </footer>
-</body>
 
+    <script src="../js/script.js"></script>
+</body>
 </html>

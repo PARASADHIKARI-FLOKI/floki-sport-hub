@@ -6,30 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floki Sports Hub</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <!-- Navbar -->
-    <div class="navbar">
-        <a href="index.html">
-            <img src="https://png.pngtree.com/png-clipart/20240310/original/pngtree-d-trophy-cup-with-confetti-gold-winner-prize-champion-reward-first-png-image_14555661.png"
-                alt="Logo" width="50" height="30">
+   <div class="navbar">
+    <a href="index.html">
+        <img src="../image/Floki Sports Hub logo design.png" alt="Logo" width="60">
+    </a>
 
-        </a>
-        <h3 class="floki">FLOKI SPORTS HUB</h3>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="sports.html">Sports</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="teams.html">Teams</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+    <h3 class="floki">FLOKI SPORTS HUB</h3>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</div>
+
+<section class="sports-hero">
+    <div class="overlay">
+        <h1>OUR SPORTS</h1>
+        <p>Six programs. One winning culture.</p>
+    </div>
+</section>
+
+<section class="sports-cards">
+
+    <div class="card">
+        <img src="https://flokisport.lovable.app/assets/basketball-team-8TLpCCcV.jpg">
+        <div class="card-content">
+            <h3>BASKETBALL</h3>
+            <p>Our basketball program competes at the highest collegiate level with both men's and women's varsity teams.</p>
+            <p class="athlete-count">30 Athletes</p>
+            <a href="team1.html" class="btn-outline">View Team</a>
+        </div>
     </div>
 
+    <div class="card">
+        <img src="https://flokisport.lovable.app/assets/soccer-team-pCVPS1uT.jpg">
+        <div class="card-content">
+            <h3>SOCCER</h3>
+            <p>A powerhouse on the pitch — our soccer teams have won 8 conference titles in the last decade.</p>
+            <p class="athlete-count">25 Athletes</p>
+            <a href="team2.html" class="btn-outline">View Team</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://flokisport.lovable.app/assets/swimming-01E_mGQq.jpg">
+        <div class="card-content">
+            <h3>SWIMMING</h3>
+            <p>Train in Olympic-standard aquatic facilities.</p>
+            <p class="athlete-count">20 Athletes</p>
+            <a href="team3.html" class="btn-outline">View Team</a>
+        </div>
+    </div>
+
+</section>
     
 
     <!-- Footer -->
@@ -99,6 +142,7 @@
             <p>&copy; 2026 Floki University Sports Club. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

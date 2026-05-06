@@ -1,7 +1,14 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Reset */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Reset */ 
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +21,7 @@ body {
     color: #e2e8f0;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -30,7 +37,14 @@ body {
     color: #38bdf8;
     font-size: 24px;
     font-weight: 700;
-    margin-right: 500px;
+    margin-right: 35%;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
 }
 
 .navbar a {
@@ -38,23 +52,12 @@ body {
     text-decoration: none;
 }
 
-.navbar h3 {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.navbar ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-.navbar ul li a {
+/* underline effect */
+.nav-links li a {
     position: relative;
-    transition: 0.3s;
 }
 
-.navbar ul li a::after {
+.nav-links li a::after {
     content: "";
     width: 0%;
     height: 2px;
@@ -65,9 +68,50 @@ body {
     transition: 0.3s;
 }
 
-.navbar ul li a:hover::after {
+.nav-links li a:hover::after {
     width: 100%;
 }
+
+/* ================= HAMBURGER ================= */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 130px;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.95);
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        display: none; /* hidden by default */
+    }
+
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .floki {
+        margin-right: 35%;
+    }
+}
+
 
 /* Hero Section */
 .hero {
@@ -726,12 +770,7 @@ form button:hover {
 
 
 /* about section */
-/* ===== GLOBAL ===== */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+
 
 /* ===== HERO SECTION ===== */
 .about-hero {
@@ -1492,4 +1531,615 @@ p.section-subtitle {
     .event-details-card p {
         font-size: 14px;
     }
+}
+
+/* ===== HERO SECTION ===== */
+.sports-hero {
+    height: 450px;
+    background: url("https://flokisport.lovable.app/assets/track-field-CLQQAA-1.jpg") center/cover no-repeat;
+    position: relative;
+    
+}
+
+
+/* Dark overlay */
+.sports-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sports-hero h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.sports-hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* ===== CARDS SECTION ===== */
+.sports-cards {
+    padding: 60px 40px;
+    background: #f3f4f6;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    color: #000;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .sports-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .sports-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sports-hero h1 {
+        font-size: 2rem;
+    }
+}/* ===== EXTRA CARD DETAILS ===== */
+
+/* Athlete Count */
+.athlete-count {
+    font-weight: 600;
+    color: #111;
+    margin: 10px 0 15px;
+}
+
+/* Button */
+.btn-outline {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #111;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    height: 40px;
+}
+
+
+/* ===== IMPROVE CARD LOOK ===== */
+
+/* Smooth image zoom */
+.card img {
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Better spacing */
+.card-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.card-content p {
+    line-height: 1.5;
+}
+
+/* Optional: Center button nicely */
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content a {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* ===== OPTIONAL PREMIUM LOOK ===== */
+
+/* Add slight gradient background */
+.sports-cards {
+    background: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
+}
+
+/* Card hover shadow upgrade */
+.card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* ===== HERO ===== */
+.teams-hero {
+    height: 300px;
+    background: url("https://flokisport.lovable.app/assets/basketball-team-8TLpCCcV.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.teams-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.teams-overlay h1 {
+    font-size: 2.8rem;
+}
+
+.teams-overlay p {
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* ===== CARDS ===== */
+.teams-container {
+    padding: 60px 40px;
+    background: #f3f4f6;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image */
+.team-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Content */
+.team-content {
+    padding: 20px;
+}
+
+.team-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.coach {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Bottom row */
+.team-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Record */
+.record {
+    font-weight: bold;
+    color: #111;
+}
+
+/* Team name */
+.team-name {
+    color: red;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .teams-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .teams-container {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .teams-overlay h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ===== TEAM DETAILS PAGE ===== */    
+
+/* ===== HERO ===== */
+.team-hero {
+    height: 300px;
+    background: url("https://flokisport.lovable.app/assets/basketball-team-8TLpCCcV.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.team-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.team-overlay h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.team-overlay p {
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* ===== PAGE ===== */
+.team-page {
+    background: #f3f4f6;
+    padding: 60px 80px;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #f97316;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Grid Layout */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* ===== ABOUT ===== */
+.about h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.about p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Coach box */
+.coach-box {
+    background: #1e3a5f;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.coach-box span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* ===== ROSTER ===== */
+.roster h2 {
+    margin-bottom: 20px;
+    color: black;
+    
+}
+
+/* Player Card */
+.player-card {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+width: 80%;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.player-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Player text */
+.player-card h3 {
+    margin-bottom: 5px;
+}
+
+.player-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Badge */
+.badge {
+    color: #f97316;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-page {
+        padding: 40px 20px;
+    }
+
+    .team-overlay h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ===== TEAM 2 DETAILS PAGE ===== */    
+/* HERO */
+.team-hero {
+    height: 300px;
+    position: relative;
+}
+
+.soccer-hero {
+    background: url("https://flokisport.lovable.app/assets/soccer-team-pCVPS1uT.jpg") center/cover no-repeat;
+}
+
+.team-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.team-overlay h1 {
+    font-size: 3rem;
+}
+
+.team-overlay p {
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* PAGE */
+.team-page {
+    padding: 60px 80px;
+    background: #f3f4f6;
+}
+
+/* Back */
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #f97316;
+    text-decoration: none;
+}
+
+/* GRID */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* ABOUT */
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Coach */
+.coach-box {
+    background: #1e3a5f;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+/* ROSTER */
+.roster h2 {
+    margin-bottom: 20px;
+}
+
+/* Player card */
+.player-card {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.player-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Text */
+.player-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Badge */
+.badge {
+    background: #fff7ed;
+    color: #f97316;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-page {
+        padding: 40px 20px;
+    }
+
+    .team-overlay h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ===== TEAM 3 DETAILS PAGE ===== */
+/* Swimming Background */
+.swimming-hero {
+    background: url("https://flokisport.lovable.app/assets/swimming-01E_mGQq.jpg") center/cover no-repeat;
+}
+
+
+
+
+/* Custom toast/alert (right side modern UI) */
+.custom-alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #1f2937;
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  z-index: 9999;
+  min-width: 220px;
+  max-width: 300px;
+
+  /* animation base */
+  opacity: 0;
+  transform: translateX(30px);
+  visibility: hidden;
+  transition: all 0.35s ease;
+}
+
+/* show state */
+.custom-alert.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* success */
+.custom-alert.success {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+/* error */
+.custom-alert.error {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* warning */
+.custom-alert.warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
 }
