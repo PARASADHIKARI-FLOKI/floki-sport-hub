@@ -1542,6 +1542,8 @@ p.section-subtitle {
 }
 
 
+
+
 /* Dark overlay */
 .sports-hero .overlay {
     position: absolute;
@@ -2097,8 +2099,24 @@ width: 80%;
     background: url("https://flokisport.lovable.app/assets/swimming-01E_mGQq.jpg") center/cover no-repeat;
 }
 
-
-
+.volley-hero {
+    height: 450px;
+    background: url("https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_xl_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel") center/cover no-repeat;
+    position: relative;
+    
+}
+.track-hero {
+    height: 450px;
+    background: url("https://flokisport.lovable.app/assets/track-field-CLQQAA-1.jpg") center/cover no-repeat;
+    position: relative;
+    
+}
+.tennis-hero{
+    height: 450px;
+    background: url("https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2003/6124083/1000w_q95.jpg") center/cover no-repeat;
+    position: relative;
+    
+}
 
 /* Custom toast/alert (right side modern UI) */
 .custom-alert {
