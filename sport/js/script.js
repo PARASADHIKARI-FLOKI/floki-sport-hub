@@ -15,7 +15,6 @@ function showAlert(message, type = "info") {
   if (type === "success") alertEl.classList.add("success");
   if (type === "error") alertEl.classList.add("error");
 
-  // auto hide
   setTimeout(() => {
     alertEl.classList.remove("show");
   }, 3000);
