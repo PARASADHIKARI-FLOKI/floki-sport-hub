@@ -138,33 +138,44 @@ if (loginForm) {
 }
 
 // =========================
-// Contact form
+// Contact form + EmailJS
 // =========================
-const contactForm = document.querySelector(".contact-form");
+const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = contactForm.querySelector("input[type='text']")?.value.trim();
-    const email = contactForm.querySelector("input[type='email']")?.value.trim();
-    const message = contactForm.querySelector("textarea")?.value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
+    // Validation
     if (!name || !email || !message) {
-      showAlert("Please fill all contact fields.", "error");
+      showAlert("Please fill all fields.", "error");
       return;
     }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      showAlert("Please enter a valid email.", "error");
-      return;
-    }
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    };
 
-    console.log("Contact Data:", { name, email, message });
-
-    showAlert("Message sent successfully!", "success");
-
-    contactForm.reset();
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "service_o7enw87", // Your Service ID
+        "template_b8hwvda", // Your Template ID
+        templateParams
+      )
+      .then(() => {
+        showAlert("Message sent successfully!", "success");
+        contactForm.reset();
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+        showAlert("Failed to send message.", "error");
+      });
   });
 }
