@@ -1238,6 +1238,7 @@ p.section-subtitle {
     }
 }
 
+
 /* ===== EVENTS SECTION ===== */
 .events {
   background: #f5f7fa;
@@ -1256,7 +1257,7 @@ p.section-subtitle {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(40%); /* dark overlay effect */
+  filter: brightness(40%);
 }
 
 /* overlay text */
@@ -1269,6 +1270,7 @@ p.section-subtitle {
   font-size: 42px;
   font-weight: bold;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .events-hero p {
@@ -1278,6 +1280,8 @@ p.section-subtitle {
   transform: translateX(-50%);
   color: #ddd;
   font-size: 16px;
+  text-align: center;
+  width: 90%;
 }
 
 /* ===== TITLE ===== */
@@ -1297,7 +1301,6 @@ p.section-subtitle {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
- 
 }
 
 /* ===== EVENT CARD ===== */
@@ -1315,7 +1318,6 @@ p.section-subtitle {
   color: black;
 }
 
-
 .event-card:hover {
   transform: scale(1.02);
 }
@@ -1326,7 +1328,6 @@ p.section-subtitle {
   height: 90px;
   border-radius: 10px;
   object-fit: cover;
-
 }
 
 /* text */
@@ -1336,14 +1337,6 @@ p.section-subtitle {
   font-weight: 600;
 }
 
-.event-card p {
-  margin: 4px 0;
-  color: #666;
-  font-size: 14px;
-}
-
-
-/* icon + text alignment */
 .event-card p {
   display: flex;
   align-items: center;
@@ -1359,19 +1352,78 @@ p.section-subtitle {
   font-size: 14px;
 }
 
+/* ===== TABLET RESPONSIVE ===== */
+@media (max-width: 768px) {
 
+  .events-hero {
+    height: 240px;
+  }
 
+  .events-hero h1 {
+    font-size: 32px;
+  }
 
-/* ===== RESPONSIVE ===== */
-@media (min-width: 768px) {
-  .events-container {
-    grid-template-columns: 1fr;
+  .events-hero p {
+    font-size: 14px;
   }
 
   .event-card {
-    padding: 25px;
+    padding: 18px;
+    gap: 15px;
+  }
+
+  .event-card img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .event-card h3 {
+    font-size: 17px;
+  }
+
+  .event-card p {
+    font-size: 13px;
   }
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 576px) {
+
+  .events-hero {
+    height: 200px;
+  }
+
+  .events-hero h1 {
+    font-size: 24px;
+    width: 90%;
+  }
+
+  .events-hero p {
+    font-size: 13px;
+    top: 60%;
+  }
+
+  .events h2 {
+    font-size: 22px;
+    margin: 35px 0 20px;
+  }
+
+  .event-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px 15px;
+  }
+
+  .event-card img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .event-card p {
+    justify-content: center;
+  }
+}
+
 
 
 
